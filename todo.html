@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    input[type=text], select {
+  width: 60%;
+  padding: 12px 20px;
+  margin left: 40px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+}
+.remove {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #ffffe6;
+  text-align: center;
+  font-size: 10px;
+  padding: 11px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 100px;
+}
+
+.remove span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.remove span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.remove :hover span {
+  padding-right: 12px;
+}
+
+.remove :hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#inc {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #ffffe6;
+  text-align: center;
+  font-size: 10px;
+  padding: 11px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 100px;
+}
+
+#inc span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#inc span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#inc :hover span {
+  padding-right: 12px;
+}
+
+#inc :hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+body {
+    background-image: url('https://lh3.googleusercontent.com/proxy/GHL5vwsWGBoOf2uW5Lv49fO6o0J4brOATg-6Z_NbNVWmoZceOE4v2wLNQN9PKr8YD58kWH4UdCIg_GKLqu7_IzShP2Mwmlg');
+    margin-top: 0; 
+    background-size:cover;
+}
+</style>
+    <head>
+        <title>KIDS WORLD</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="todo.js" async></script>
+    </head>
+    <body>
+        <h1>What Do You Have Today?</h1>
+        <input type="text" placeholder="Your todo!" />
+        <button id="inc">Add</button>
+        <ol id="todoList"></ol>
+    </body>
+</html>

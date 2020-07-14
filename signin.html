@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="signin.css">	
+  <title>KIDS WORLD</title>
+</head>
+<body>
+ 
+
+
+
+<div class="login-page"></div>
+<div class="form">
+  <form class="register-form">
+  <input type="text" placeholder="Name"/>
+   <input type="text" placeholder="Password"/>
+    <input type="text" placeholder="Email"/>
+    <button>Create</button>
+    <p class="message">Already Registred?<a href="#">Login</a></p>
+  </form>
+
+  <form class="login-form">
+  	<input id="username" type="text" placeholder="user name"/>
+  	<input id="password" type="password" placeholder="password"/>
+  	<button onclick="getInfo()"><a href="about.html">login</a></button>
+  	<p class="message">Not Registred?<a href="#">Register</a></p>
+  </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(".message a").click(function(){
+      $("form").animate({height:"toggle",opacity:"toggle"},"slow");
+      });
+</script>
+<script>
+  var people =[
+  {
+    username : "im-not-a-kid",
+    password : "done1234"
+  },
+  {
+    username : "hello-its-me",
+    password : "done1234"
+  }
+  ]
+  function getInfo(){
+    var username = document.getElementById("username").value
+    var password = document.getElementById("password").value
+   for(var i= 0; i < people.length ; i++){
+   if(username === people[i].username && password === people[i].password ){
+    return "your " + username + "and your "+ password
+   } 
+    }
+    alert("your usserName || password incorect! Please try again :)")
+  }
+</script>
+
+</body>
+</html>
+
+
+

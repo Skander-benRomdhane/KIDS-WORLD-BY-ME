@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+/*img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}*/
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+   margin-top:45px
+}
+ 
+li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+ 
+li:last-child {
+  border: none;
+  text-align: center;
+}
+ 
+li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 200px;
+  text-align: center;
+ 
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+ 
+li a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+
+
+</style>
+<head>
+	  <meta charset="UTF-8">
+
+	<title>KIDS WORLD</title>
+</head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="about.css">	
+
+<body>
+	<h1 class="myH1"> <span class="spanBlue">W</span><span class="spanGreen">E</span><span class="spanYelow">L</span>C<span class="spanRed">O</span><span class="spanBlue">M</span><span class="spanGreen">E</span> <span class="spanRed">T</span><span class="spanYelow">O</span> <span class="spanBlue">Y</span><span class="spanRed">O</span><span class="spanYelow">U</span><span class="spanGreen">R</span> <span class="spanBlue">W</span><span class="spanYelow">O</span><span class="spanGreen">R</span><span class="spanRed">L</span><span class="spanGreen">D</span> </h1>
+<img class="kidsImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4paFw_u5dxKKn1VMpp6EIwb1CSTYjbL5L4A&usqp=CAU">
+<div>
+	<ul>
+		<li><a href="toDo.html">My Todo List</li>
+	    <li><a href="warmup.html">Warm'Up Of The Day </li>
+		<li><a href="Draw.html">Draw Time</li>
+		<li><a href="KIDSstore.html">Kids Store</li>
+	    
+
+	</ul>
+	<script type="text/javascript">
+		$("li").hover(function(){
+  $(this).css("background-color", "yellow");
+  }, function(){
+  $(this).css("background-color", "pink");
+});
+		
+	</script>
+</div>
+</body>
+</html>

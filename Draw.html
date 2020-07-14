@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Draw.css">	
+	<title>KIDS WORLD</title>
+</head>
+<body>
+<canvas></canvas>
+ <!-- canvas element is used to draw on a web page --> 
+     <main>
+    <section class="colors">
+      <input type="text" class="color-black" value="" />
+    </section>
+    <button class="clear">Clear</button>
+  </main>
+  <script type="text/javascript">
+  	var clearButton = document.querySelector('.clear');
+    var color = document.querySelector('.color-black');
+
+    var canvas = document.querySelector('canvas');
+    var context = canvas.getContext('2d');
+   // getContext() : return a drawing context on the canvas
+
+  canvas.addEventListener('mousedown', start);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', stop);
+  // addEventListener() attached an event handler to the document tekes two parameters (event,function)
+  clearButton.addEventListener('click', clear);
+
+
+function draw ({clientX: x, clientY: y}) {
+  // for that function my source is : https://stackoverflow.com/questions/28105192/html5-javascript-paint-brush
+  // clientX : property return the horizantal when the mouse enter
+  // clientY: property return the vertical
+  if (!isDrawing) return;
+  context.lineCap = "round";
+  // lineCap property of the canvas 2D 
+  context.strokeStyle = color.value;
+  // property returns the color
+
+  context.lineTo(x, y);
+  // lineTo method adds a new point and creates a line to that point and takes two parameters the first one  
+  // x , y = where to create the line to
+
+  context.stroke();
+  // stroke method draws the path you have defined with all those moveTo and lineTo methods
+
+  context.beginPath();
+  // beginPath method adds a new point and creates a line to that point
+
+  context.moveTo(x, y);
+  // moveTo method moves the path to the specific points in the canvas without creating a line 
+}
+ 
+ var isDrawing = false;
+function start (e) {
+  isDrawing = true;
+  draw(e);
+}
+
+function stop () {
+  isDrawing = false;
+  context.beginPath();
+}
+
+function clear () {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+
+function resize () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+resize();
+
+
+  </script>
+  <div id="button1">
+  <div class="mybtn">
+    <button  type="button" class="exit"><a href="about.html"><span>Exist</span></button>
+  </div>
+</div>
+</body>
+</html>

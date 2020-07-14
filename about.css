@@ -1,0 +1,53 @@
+body {
+	background-color: #eedfcc;
+}
+.myH1 {
+	/*text-align: center;
+	font-style: oblique;
+	font-size:64px;
+	text-shadow: 5px 5px #558ABB;*/
+  font-size: 48px;
+  text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color: #dd0000;
+  padding:64px 0 0 0;
+  margin:16px auto;
+  font-weight:lighter;
+  -moz-box-shadow:none;  
+  -webkit-box-shadow: none;  
+  box-shadow:none;  
+  text-align:center;
+  display:block;
+  min-height:172px;
+  min-width:800;
+  max-height:172px;
+  max-width:800px;
+}
+h1:hover {
+  box-shadow: 0 0 34px 22px rgba(0, 140, 186, 0.5);
+}
+
+/*.spanBlue {
+	color: blue;
+}
+.spanRed {
+	color: red;
+}
+.spanYelow {
+	color: yellow;
+}
+.spanGreen {
+	color: green;
+}*/
+
+.kidsImg {
+	 display: block;
+	border-radius: 25px;
+	margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+
+}
+img:hover {
+  box-shadow: 0 0 34px 22px rgba(0, 140, 186, 0.5);
+}
